@@ -2,59 +2,9 @@
 errors listed below, and try again.
 
 
-The label start is defined twice, at File "game/outside.rpy", line 9:
-label start:
-and File "game/script.rpy", line 9:
-label start:
-
-
-The label parking_lot is defined twice, at File "game/outside.rpy", line 33:
-    label parking_lot:
-and File "game/script.rpy", line 33:
-    label parking_lot:
-
-
-The label parkingLotChoices is defined twice, at File "game/outside.rpy", line 36:
-        label parkingLotChoices:
-and File "game/script.rpy", line 36:
-        label parkingLotChoices:
-
-
-The label playground is defined twice, at File "game/outside.rpy", line 57:
-    label playground:
-and File "game/script.rpy", line 57:
-    label playground:
-
-
-The label playgroundChoices is defined twice, at File "game/outside.rpy", line 62:
-        label playgroundChoices:
-and File "game/script.rpy", line 62:
-        label playgroundChoices:
-
-
-The label baseballField is defined twice, at File "game/outside.rpy", line 91:
-    label baseballField:
-and File "game/script.rpy", line 91:
-    label baseballField:
-
-
-The label parkedCar is defined twice, at File "game/outside.rpy", line 95:
-    label parkedCar:
-and File "game/script.rpy", line 95:
-    label parkedCar:
-
-
-The label schoolFrontDoor is defined twice, at File "game/outside.rpy", line 99:
-    label schoolFrontDoor:
-and File "game/script.rpy", line 99:
-    label schoolFrontDoor:
-
-
-The label behindSchool is defined twice, at File "game/outside.rpy", line 102:
-    label behindSchool:
-and File "game/script.rpy", line 103:
-    label behindSchool:
-
+File "game/outside.rpy", line 131: expected menuitem
+    jump dumpsterChoices
+    ^
 
 Ren'Py Version: Ren'Py 8.0.0.22062402
-Fri Jul  1 12:24:28 2022
+Fri Jul  1 13:07:38 2022

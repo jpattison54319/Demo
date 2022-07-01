@@ -7,8 +7,8 @@
 # The game starts here.
 
 label start:
-    call variables from _call_variables
-    call characters from _call_characters
+    call variables 
+    call characters
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -101,8 +101,41 @@ label start:
         return
     label behindSchool:
         scene dumpsters
+        "You see dumpsters in front of you, and the playground / baseball field on either side of the school"
         e "Smells like trash!"
-        
+
+        label dumpsterChoices:
+            menu:
+                e "What should I do?"
+
+                "Look under dumpster":
+                    e "Well, not sure what im really looking for but theres nothing under here."
+                    jump dumpsterChoices
+                "Look inside dumpster":
+                    e "As far as dumpsters go, this is definitely one of the cleanest ones ive seen"
+                    if dumpsterItem in roomItems["dumpster"]:
+                        menu:
+                            "There is a single clove of garlic inside the dumpster"
+
+                            "Take garlic":
+                                e "Come to think of it, I did forget my lunch!"
+                                $ inventory.append(dumpsterItem)
+                                $ roomItems["dumpster"].remove(dumpsterItem)
+                                jump dumpsterChoices
+                            
+                            "Leave garlic":
+                                e "Probably for the best I dont smell like garlic."
+                                jump dumpsterChoices
+                    else: 
+                        "Dumpster is empty"
+                        jump dumpsterChoices
+                    
+                "Explore baseball field":
+                    e "Man, I used to play baseball as a kid. Lets go get some memories!"
+                    jump baseballField
+                "Explore playground":
+                    jump playground
+
         return
 
     # This ends the game.
