@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/outside.rpy", line 131: expected menuitem
-    jump dumpsterChoices
-    ^
+File "game/FirstFloor.rpy", line 59: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+                e "It looks like this is the office and cafeteria for me.”
 
 Ren'Py Version: Ren'Py 8.0.0.22062402
-Fri Jul  1 13:07:38 2022
+Thu Jul  7 23:45:30 2022

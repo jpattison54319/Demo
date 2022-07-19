@@ -1,28 +1,36 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/outside.rpy", line 116, in script
-    if dumpsterItem in roomItems["dumpster"]:
-  File "game/outside.rpy", line 116, in <module>
-    if dumpsterItem in roomItems["dumpster"]:
-NameError: name 'dumpsterItem' is not defined
+  File "renpy/common/00start.rpy", line 210, in script call
+    call _gl_test
+  File "renpy/common/00gltest.rpy", line 388, in script
+    with None
+  File "game/python.rpy", line 7, in display_items_overlay
+    for i in range(0, len(items)):
+NameError: name 'items' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/outside.rpy", line 116, in script
-    if dumpsterItem in roomItems["dumpster"]:
-  File "/Users/jamespattison/Desktop/renpy-8.0.0-sdk/renpy/ast.py", line 2095, in execute
-    if renpy.python.py_eval(condition):
-  File "/Users/jamespattison/Desktop/renpy-8.0.0-sdk/renpy/python.py", line 1080, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "/Users/jamespattison/Desktop/renpy-8.0.0-sdk/renpy/python.py", line 1073, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/outside.rpy", line 116, in <module>
-    if dumpsterItem in roomItems["dumpster"]:
-NameError: name 'dumpsterItem' is not defined
+  File "renpy/common/00start.rpy", line 210, in script call
+    call _gl_test
+  File "renpy/common/00gltest.rpy", line 388, in script
+    with None
+  File "/Users/jamespattison/Desktop/renpy-8.0.0-sdk/renpy/ast.py", line 1638, in execute
+    renpy.exports.with_statement(trans, paired=paired)
+  File "/Users/jamespattison/Desktop/renpy-8.0.0-sdk/renpy/exports.py", line 1653, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "/Users/jamespattison/Desktop/renpy-8.0.0-sdk/renpy/display/core.py", line 2793, in do_with
+    self.with_none()
+  File "/Users/jamespattison/Desktop/renpy-8.0.0-sdk/renpy/display/core.py", line 2815, in with_none
+    self.compute_overlay()
+  File "/Users/jamespattison/Desktop/renpy-8.0.0-sdk/renpy/display/core.py", line 2958, in compute_overlay
+    i()
+  File "game/python.rpy", line 7, in display_items_overlay
+    for i in range(0, len(items)):
+NameError: name 'items' is not defined
 
 macOS-10.16-x86_64-i386-64bit x86_64
 Ren'Py 8.0.0.22062402
 Fattay Chronicles 1.0
-Fri Jul  1 13:08:20 2022
+Wed Jul  6 10:25:13 2022
